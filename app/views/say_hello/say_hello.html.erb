@@ -10,12 +10,12 @@
 
 <!-- i can even choose what to show based on the input! -->
 
-<h2>
+<!--<h2>
 	Hello <%= @name %>.
 	<% if @name == "akash" %>
 	you wonderful, amazing person
 	<% end %>
-</h2>
+</h2>-->
 
 
 <!-- I don't have to keep all my code in 1 place, I can put stuff into a 
@@ -23,7 +23,7 @@
 
 
 <!-- the name here is shown without the underscore, but don't forget to add it to your filename! -->
-<%= render :partial => "some_partial" %>
+<%= render :partial => "some_partial" %>  <!-- => hash fuction key "partial" and da value is "some _partial"-->
 
 	<!-- Partials can also be shared and referenced across multiple folders -->
 <%= render :partial => "shared/shared_partial" %>
@@ -33,5 +33,7 @@
 
 	<!-- and finally I can send information across to a partial like so -->
 <%= render :partial => "partial_with_variables", :locals => {:a => "something"} %>
+
+<%= render :partial => "shared/shared_akash"%>
 
 

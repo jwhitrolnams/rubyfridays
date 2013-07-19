@@ -3,8 +3,10 @@ Testapp::Application.routes.draw do
   match "/" => "home#index"
   match "/sayhello" => "home#sayhello"
   
-  match "/sayhello/to/:name" => "say_hello#say_hello_to"
-  match "/sayhello/to/:a/:b" => "say_hello#add"
+  match "/sayhello/to/:name" => "say_hello#say_hello_to" #:via => "get"
+  match "/sayhello/to/:a/:b" => "say_hello#add" #:via => "get"
+  match "/sayhello/formtest" => "say_hello#formtest" #:via => "get"
+  match "/sayhello/dosomething" => "say_hello#dosomething", :via => "post"
 
   # STEP 1: tell your application which url should go to which
   # peice of code (config/routes.rb)
